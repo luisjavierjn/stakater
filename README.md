@@ -1,6 +1,6 @@
 # Stakater Backend!
 
-This project was created using Java11, SpringBoot along with Gradle, following the Spring MVC stack and getting the initial boilerplate from https://start.spring.io/ and got in the works using Intellij IDEA 2020.2.4. Several packages are used to create the following layers: repositories, services, domain and controllers. The services layer transforms entities into DTOs through ModelMapper and Lombok plugin came handy on Builder pattern implementation. The controllers layer is about RESTful services with just one GET endpoint to return the current **Name** which is an environment variable.
+This project was created using Java11, SpringBoot along with Gradle, following the Spring MVC stack and getting the initial boilerplate from https://start.spring.io/ and got in the works using Intellij IDEA 2020.2.4. Several packages are used to create the following layers: repositories, services, domain and controllers. The services layer transforms entities into DTOs through ModelMapper and Lombok plugin came handy on Builder pattern implementation. The controllers layer is about RESTful services with just one GET endpoint to return the current **Name** which is an environment variable. This endpoint was configured with the annotation **@CrossOrigin** to accept requests from port 9000 which is the port used by the Frontend.
 
 # Dockerfile
 
@@ -15,3 +15,4 @@ https://hub.docker.com/repository/docker/luisjavierjn/stakater-spring-boot
 
 ![GET Endpoint](src/main/resources/static/get-endpoint.PNG)
 
+The folder Kubernetes contains the yaml file auto-generated when a resource is created through the Kubernetes dashboard out of the image previously loaded in docker**hub**. Docker Desktop brings Kubernetes v1.19.7 as a single-node cluster, it is part of the options that can be enabled to start off along with Docker.
