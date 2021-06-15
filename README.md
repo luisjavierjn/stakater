@@ -17,4 +17,9 @@ https://hub.docker.com/repository/docker/luisjavierjn/stakater-spring-boot
 
 # Kubernetes
 
-The folder Kubernetes contains the yaml file auto-generated when a resource is created through the Kubernetes dashboard out of the image previously loaded in docker**hub**. Docker Desktop brings Kubernetes v1.19.7 as a single-node cluster, it is part of the options that can be enabled to start off along with Docker.
+The folder Kubernetes contains the yaml file auto-generated when a resource is created through the Kubernetes dashboard out of the image previously loaded in docker**hub**. Docker Desktop brings Kubernetes v1.19.7 as a single-node cluster, it is part of the options that can be enabled to start off along with Docker. The following commands enable the usage of the dashboard for the Kubernetes cluster coming from Docker Desktop, set an **Skip** button to the initial screen for fast entry and trigger the dashboard.
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.2.0/aio/deploy/recommended.yaml
+kubectl patch deployment kubernetes-dashboard -n kubernetes-dashboard --type 'json' -p '[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--enable-skip-login"}]'
+kubectl proxy
+```
