@@ -15,4 +15,6 @@ https://hub.docker.com/repository/docker/luisjavierjn/stakater-spring-boot
 
 ![GET Endpoint](src/main/resources/static/get-endpoint.PNG)
 
+# Kubernetes
+
 The folder Kubernetes contains the yaml file auto-generated when a resource is created through the Kubernetes dashboard out of the image previously loaded in docker**hub**. Docker Desktop brings Kubernetes v1.19.7 as a single-node cluster, it is part of the options that can be enabled to start off along with Docker.
