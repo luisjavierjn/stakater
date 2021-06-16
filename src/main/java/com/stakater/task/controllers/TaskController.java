@@ -19,7 +19,7 @@ public class TaskController {
     @Autowired
     TaskService taskService;
 
-    @CrossOrigin(origins = "http://localhost:9000") //4200
+    @CrossOrigin(origins = "http://localhost:9000")
     @GetMapping(value = "/name", produces = { MediaType.APPLICATION_JSON_VALUE })
     public ApiResponse<String> getName() {
         return new ApiResponse<>(HttpStatus.OK.value(),INFO_RETRIEVED_SUCCESSFULLY, taskService.getData().getName());
